@@ -48,15 +48,15 @@ export default function Home() {
           position: relative;
           width: 100vw;
           height: 176vw;
-          max-width: 500px;
-          max-height: 881px;
+          max-width: 600px;
+          max-height: 1057px;
         }
         .timelineImage {
           position: relative;
           width: 100vw;
           height: 200vw;
-          max-width: 500px;
-          max-height: 1000px;
+          max-width: 600px;
+          max-height: 1200px;
         }
         main {
           flex: 1;
