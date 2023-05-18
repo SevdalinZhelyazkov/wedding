@@ -1,73 +1,72 @@
-import Head from 'next/head';
-import styles from '../styles/Home.module.css';
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
+import main from "./main.jpg";
+import timeline from "./timeline.jpg";
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Сватбата на Кристина и Севдалин</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <div className="mainImage">
+          <Image src={main} fill alt="KS" placeholder="blur" />
+        </div>
 
-        <p className={styles.description}>
-          Get started by editing <code>pages/index.js</code>
-        </p>
+        <button type="button" className="submit">
+          Потвърди Присъствие
+        </button>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+        <div className="timelineImage">
+          <Image
+            src={timeline}
+            fill
+            alt="timeline"
+            placeholder="blur"
+          />
         </div>
       </main>
 
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
-        </a>
-      </footer>
-
       <style jsx>{`
+        .submit {
+          background-color: #431f09;
+          border-radius: 8px;
+          color: #fff;
+          font-weight: bold;
+          padding: 15px 25px;
+          border: none;
+          outline: 0;
+          cursor: pointer;
+        }
+        .submit:hover {
+          background-color: #5c3117;
+        }
+        .mainImage {
+          position: relative;
+          width: 100vw;
+          height: 176vw;
+          max-width: 500px;
+          max-height: 881px;
+        }
+        .timelineImage {
+          position: relative;
+          width: 100vw;
+          height: 200vw;
+          max-width: 500px;
+          max-height: 1000px;
+        }
         main {
-          padding: 5rem 0;
           flex: 1;
           display: flex;
           flex-direction: column;
-          justify-content: center;
           align-items: center;
+          max-width: 500px;
+          width: 100%;
+          position: relative;
         }
         footer {
           width: 100%;
@@ -111,5 +110,5 @@ export default function Home() {
         }
       `}</style>
     </div>
-  )
+  );
 }
