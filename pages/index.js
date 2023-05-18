@@ -5,6 +5,10 @@ import main from "./main.jpg";
 import timeline from "./timeline.jpg";
 
 export default function Home() {
+  const handleClick = () => {
+    window.open("https://forms.gle/xMdaEaDKyBB81U7e8");
+  };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -17,17 +21,12 @@ export default function Home() {
           <Image src={main} fill alt="KS" placeholder="blur" />
         </div>
 
-        <button type="button" className="submit">
+        <button type="button" className="submit" onClick={handleClick}>
           Потвърди Присъствие
         </button>
 
         <div className="timelineImage">
-          <Image
-            src={timeline}
-            fill
-            alt="timeline"
-            placeholder="blur"
-          />
+          <Image src={timeline} fill alt="timeline" placeholder="blur" />
         </div>
       </main>
 
